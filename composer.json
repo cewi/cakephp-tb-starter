@@ -1,6 +1,6 @@
 {
-    "name": "Cewi/CakephpTbStarter",
-    "description": "extends gourmet/twitter_bootstarp with more advanced bake templates",
+    "name": "cewi/cakephp_tb_starter",
+    "description": "extends gourmet/twitter_bootstrap with more advanced bake templates",
     "type": "cakephp-plugin",
     "keywords": [
         "cakephp", 
