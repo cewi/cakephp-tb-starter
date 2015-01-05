@@ -23,11 +23,25 @@ You first have to add the repository manually by adding this line to your compos
 ```
 
 
-The recommended way to install the packages is:
+The recommended way to install the package is:
 
 ```
 composer require cewi/cakephp_tb_starter
 ```
 
 ##Usage
-coming soon...
+For the IconHelper just include it in AppController or in any Controller, you wish to use it:
+
+```
+public $helpers = ['Cewi/CakephpTbStarter.Icon'];
+```
+
+you can then use it's public methods:
+
+- $this->Icon->span($iconName) will output a span-Tag with the icon. I.e. $this->Icon->span('glyphicon-star') will output 
+```
+<span class="glyphicon glyphicon-star"  aria-hidden="true"></span>
+```
+- $this->Icon->link() and $this->Icon->postLink() will behave like $this->Html->link() reps. $this->Form->postLink(), unless the 'action' in the $url-Array is one of 'edit', 'add', 'index', 'list', or 'delete'. It then will output an icon instead of the text. If you want both icons and text, ad 'keepTitle' => true to the $options-Array.
+
+Using the bake-templates: coming soon...
