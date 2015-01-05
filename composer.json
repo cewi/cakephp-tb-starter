@@ -30,7 +30,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Cewi/CakephpTbStarter\\": "src"
+            "Cewi\\CakephpTbStarter\\": "src"
         }
     },
     "autoload-dev": {
