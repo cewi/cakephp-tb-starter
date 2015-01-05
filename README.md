@@ -42,6 +42,6 @@ you can then use it's public methods:
 ```
 <span class="glyphicon glyphicon-star"  aria-hidden="true"></span>
 ```
-- $this->Icon->link() and $this->Icon->postLink() will behave like $this->Html->link() reps. $this->Form->postLink(), unless the 'action' in the $url-Array is one of 'edit', 'add', 'index', 'list', or 'delete'. It then will output an icon instead of the text. If you want both icons and text, ad 'keepTitle' => true to the $options-Array.
+- $this->Icon->link() and $this->Icon->postLink() will behave like $this->Html->link() resp. $this->Form->postLink(), unless the 'action' in the $url-Array is one of 'edit', 'add', 'index', 'list', or 'delete'. It then will output an icon instead of the text. If you want both icons and text, add 'keepTitle' => true to the $options-Array.
 
 Using the bake-templates: coming soon...
