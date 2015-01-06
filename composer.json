@@ -1,6 +1,6 @@
 {
     "name": "cewi/cakephp_tb_starter",
-    "description": "extends gourmet/twitter_bootstrap with more advanced bake templates",
+    "description": "extends FriendsOfCake/bootstrap-ui with more advanced bake templates",
     "type": "cakephp-plugin",
     "keywords": [
         "cakephp", 
@@ -23,7 +23,7 @@
         "php": ">=5.4",
         "cakephp/plugin-installer": "*",
         "cakephp/cakephp": "3.0.x-dev",
-        "gourmet/twitter_bootstrap": "dev-master"
+        "https://github.com/FriendsOfCake/bootstrap-ui": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": "*"
