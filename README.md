@@ -6,7 +6,7 @@ The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/Friends
 All bake templates are highly opinionated and will only reflect my own needs. Use them as a starting point or inspiration.
 
 ## What you get
-1. Alternative Bake templates for the index, view, edit and add actions.
+1. Alternative Bake templates for the index, view, edit and add actions. The Templates produce less links in the sidebar. They include the options to output icons, when the provided Helpers are used.
 2. HtmlHelper and FormHelper can add icons to links (Actually  ([Icomoon](https://icomoon.io/), [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [Glyphicons](http://getbootstrap.com/components/) supported). You have to include the Font-Libraries yourself. I recommend using bower. The HtmlHelper now has an span() method which outputs a span with the icon.
 
 ## Installation
