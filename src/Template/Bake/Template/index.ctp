@@ -17,14 +17,14 @@ $this->extend('../Layout/TwitterBootstrap/dashboard');
 $this->start('tb_sidebar');
 ?>
 <ul class="nav nav-sidebar">
-    <li><?= $this->Icon->link(__('New {0}', ['<%= $singularHumanName %>']), ['action' => 'add'], ['keepTitle' => true]); ?></li>
+    <li><?= $this->Html->link(__('New {0}', ['<%= $singularHumanName %>']), ['action' => 'add'], ['icon' => 'glyphicon-plus']); ?></li>
     <%
     $done = [];
     foreach ($associations as $type => $data):
         foreach ($data as $alias => $details):
             if ($details['controller'] != $this->name && !in_array($details['controller'], $done)):
                 %>
-    <li><?= $this->Icon->link(__('List {0}', ['<%= Inflector::humanize($details["controller"]) %>']), ['controller' => '<%= $details["controller"] %>', 'action' => 'index'], ['keepTitle' => true]); ?></li>
+    <li><?= $this->Html->link(__('List {0}', ['<%= Inflector::humanize($details["controller"]) %>']), ['controller' => '<%= $details["controller"] %>', 'action' => 'index'], ['icon' => 'glyphicon-list']); ?></li>
                 <%
                 $done[] = $details['controller'];
             endif;
@@ -85,9 +85,9 @@ $fields = collection($fields)
             $pk = '$' . $singularVar . '->' . $primaryKey[0];
             %>
             <td class="actions">
-                <?= $this->Icon->link(__('View'), ['action' => 'view', <%= $pk %>]) ?>
-                <?= $this->Icon->link(__('Edit'), ['action' => 'edit', <%= $pk %>]) ?>
-                <?= $this->Icon->postLink(__('Delete'), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>)]) ?>
+                <?= $this->Html->link(__('View'), ['action' => 'view', <%= $pk %>], ['icon' => 'glyphicon-zoom-in']) ?>
+                <?= $this->Html->link(__('Edit'), ['action' => 'edit', <%= $pk %>], ['icon' => 'glyphicon-pencil']) ?>
+                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>), 'icon' => 'glyphicon-warning-sign']) ?>
             </td>
         </tr>
 
