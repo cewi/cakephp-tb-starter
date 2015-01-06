@@ -62,3 +62,5 @@ Methods:
 ###Bake-Templates
 just add -t Cewi/CakeTbStarter to your bake commands. The templates rely on the layouts provided by the FriendsOfCake/bootstrap-ui Plugin (above). See there how to include them.
  
+###TODO
+Add an option to remove the title in links and output only the icon. (Providing only space for the title is not a solution because we need a meaningful title for the title-property of the link, especially when there is only an icon).
