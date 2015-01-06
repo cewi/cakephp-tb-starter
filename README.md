@@ -11,7 +11,7 @@ All bake templates are highly opinionated and will only reflect my own needs. Us
 
 ## Installation
 You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
-You first have to add the repository manually by adding this line to your composer.json:
+You first have to add the repository manually by adding to your composer.json:
 
 ```
 "repositories": [
@@ -32,7 +32,7 @@ composer require cewi/cakephp_tb_starter
 ##Usage
 
 ###Helpers
-If you plan to use the Helpers just include them in AppController or in any Controller, you wish to use it:
+If you plan to use the Helpers just include them in AppController or in any Controller, you wish to use them:
 
 ```
 public $helpers = [
@@ -41,7 +41,7 @@ public $helpers = [
     ];
 ```
 
-you can then use them like so:
+The Helpers now can output icons: 
 
 - $this->Html->span($iconName) will output a span-Tag with the icon. I.e. $this->Icon->span('glyphicon-star') will output 
 ```
