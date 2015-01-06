@@ -23,9 +23,9 @@ $this->start('tb_sidebar');
 ?>
 <ul class="nav nav-sidebar">
     <% if (strpos($action, 'add') === false): %>
-    <li><?= $this->Icon->postLink(__('Delete {0}', ['<%= $singularHumanName %>']), ['action' => 'delete', $<%= $singularVar %>-><%= $primaryKey[0] %>], ['confirm' => __('Are you sure you want to delete # {0}?', $<%= $singularVar %>-><%= $primaryKey[0] %>), 'keepTitle'=>true])?> </li>
+    <li><?= $this->Form->postLink(__('Delete {0}', ['<%= $singularHumanName %>']), ['action' => 'delete', $<%= $singularVar %>-><%= $primaryKey[0] %>], ['confirm' => __('Are you sure you want to delete # {0}?', $<%= $singularVar %>-><%= $primaryKey[0] %>), 'icon'=>'glyphicon-warning-sign'])?> </li>
     <% endif; %>
-    <li><?= $this->Icon->link(__('List {0}', ['<%= $pluralHumanName %>']), ['action' => 'index'], ['keepTitle' => true]) ?></li>
+    <li><?= $this->Html->link(__('List {0}', ['<%= $pluralHumanName %>']), ['action' => 'index'], ['icon' => 'glyphicon-list']) ?></li>
 </ul>
 <?php $this->end(); ?>
 <?= $this->Form->create($<%= $singularVar %>); ?>

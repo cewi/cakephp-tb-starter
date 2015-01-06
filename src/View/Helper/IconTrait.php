@@ -25,21 +25,4 @@ trait IconTrait
         return $out;
     }
 
-    /**
-     * changing Options
-     *
-     * @access public
-     * @since 06.01.2015
-     * @todo more options, i.e. tooltips
-     * @param array $options
-     * @return arry
-     */
-    protected function _changeOptions($options)
-    {
-        unset($options['icon']);
-        $options['escape'] = FALSE;
-        $options['title'] = $title;
-        return $options;
-    }
-
 }

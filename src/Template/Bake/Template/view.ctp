@@ -54,9 +54,9 @@ $this->extend('../Layout/TwitterBootstrap/dashboard');
 $this->start('tb_sidebar');
 ?>
 <ul class="nav nav-sidebar">
-    <li><?= $this->Icon->link(__('List {0}', ['<%= $pluralHumanName %>']), ['action' => 'index'], ['keepTitle' => true]) ?> </li>
-    <li><?= $this->Icon->link(__('Edit {0}', ['<%= $singularHumanName %>']), ['action' => 'edit', <%= $pk %>], ['keepTitle'=>true]) ?> </li>
-    <li><?= $this->Icon->postLink(__('Delete {0}', ['<%= $singularHumanName %>']), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>), 'keepTitle'=>true]) ?> </li>
+    <li><?= $this->Html->link(__('List {0}', ['<%= $pluralHumanName %>']), ['action' => 'index'], ['icon' => 'glyphicon-list']) ?> </li>
+    <li><?= $this->Html->link(__('Edit {0}', ['<%= $singularHumanName %>']), ['action' => 'edit', <%= $pk %>], ['icon'=>'glyphicon-pencil']) ?> </li>
+    <li><?= $this->Form->postLink(__('Delete {0}', ['<%= $singularHumanName %>']), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>), 'icon'=>'glyphicon-warning-sign']) ?> </li>
 </ul>
 <?php $this->end(); ?>
 
@@ -140,9 +140,9 @@ foreach ($relations as $alias => $details):
                         <% endforeach; %>
                         <% $otherPk = "\${$otherSingularVar}->{$details['primaryKey'][0]}"; %>
                     <td class="actions">
-                            <?= $this->Icon->link(__('View'), ['controller' => '<%= $details['controller'] %>', 'action' => 'view', <%= $otherPk %>]) ?>
-                            <?= $this->Icon->link(__('Edit'), ['controller' => '<%= $details['controller'] %>', 'action' => 'edit', <%= $otherPk %>]) ?>
-                            <?= $this->Icon->postLink(__('Delete'), ['controller' => '<%= $details['controller'] %>', 'action' => 'delete', <%= $otherPk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $otherPk %>)]) ?>
+                            <?= $this->Html->link(__('View'), ['controller' => '<%= $details['controller'] %>', 'action' => 'view', <%= $otherPk %>], ['icon'=>'glyphicon-zoom-in']) ?>
+                            <?= $this->Html->link(__('Edit'), ['controller' => '<%= $details['controller'] %>', 'action' => 'edit', <%= $otherPk %>], ['icon' => 'glyphicon-pencil']) ?>
+                            <?= $this->Form->postLink(__('Delete'), ['controller' => '<%= $details['controller'] %>', 'action' => 'delete', <%= $otherPk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $otherPk %>), 'icon'=>'glyphicon-warning-sign']) ?>
                         </td>
                     </tr>
                 <?php endforeach; ?>
@@ -152,4 +152,3 @@ foreach ($relations as $alias => $details):
     </div>
 </div>
 <% endforeach; %>
-

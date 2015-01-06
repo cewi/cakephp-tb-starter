@@ -2,7 +2,7 @@
 
 namespace Cewi\CakephpTbStarter\View\Helper;
 
-use FriendsOfCake\bootstrap\View\Helper\FormHelper as Helper;
+use BootstrapUI\View\Helper\FormHelper as Helper;
 use Cake\View\View;
 
 /*
@@ -53,8 +53,10 @@ class FormHelper extends Helper
     public function postLink($title, $url = null, array $options = [])
     {
         if (isset($options['icon']) && !empty($options['icon'])) {
+            $options['title'] = $title;
             $title = $this->_span($options['icon']) . ' ' . $title;
-            $options = $this->_changeOptions($options);
+            unset($options['icon']);
+            $options['escape'] = FALSE;
         };
         return parent::postLink($title, $url, $options);
     }

@@ -6,7 +6,7 @@ The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/Friends
 All bake templates are highly opinionated and will only reflect my own needs. Use them as a starting point or inspiration.
 
 ## What you get
-1. Bake templates for the index, view, edit and add actions using some TwitterBootstrap Features, i.e. icons. 
+1. Alternative Bake templates for the index, view, edit and add actions.
 2. HtmlHelper and FormHelper can add icons to links (Actually  ([Icomoon](https://icomoon.io/), [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [Glyphicons](http://getbootstrap.com/components/) supported). You have to include the Font-Libraries yourself. I recommend using bower. The HtmlHelper now has an span() method which outputs a span with the icon.
 
 ## Installation
@@ -29,6 +29,13 @@ The recommended way to install the package then is:
 composer require cewi/cakephp_tb_starter
 ```
 
+Then load the Plugins in your bootstrap.php
+
+```
+Plugin::load('BootstrapUI');
+Plugin::load('Cewi/CakephpTbStarter', ['bootstrap' => true]);
+```
+
 ##Usage
 
 ###Helpers
@@ -41,7 +48,7 @@ public $helpers = [
     ];
 ```
 
-The Helpers now can output icons: 
+Methods: 
 
 - $this->Html->span($iconName) will output a span-Tag with the icon. I.e. $this->Icon->span('glyphicon-star') will output 
 ```
@@ -53,5 +60,5 @@ The Helpers now can output icons:
 ```
 
 ###Bake-Templates
-just add -t Cewi/CakeTbStarter to your bake commands.
+just add -t Cewi/CakeTbStarter to your bake commands. The templates rely on the layouts provided by the FriendsOfCake/bootstrap-ui Plugin (above). See there how to include them.
  
