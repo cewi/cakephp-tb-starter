@@ -52,9 +52,8 @@ $fields = collection($fields)
         <tr>
             <?= $this->Form->create(null, ['url' => ['action' => 'index']]); ?>
             <% foreach ($fields as $field): %>
-            <th><%= debug($fields); %></th>
+            <td><?= $this->Form->input('<%= $field %>', ['div' => false, 'label' => false]); ?></td>
             <% endforeach; %>
-            <td><?= $this->Form->input('name', ['div' => false, 'label' => false]); ?></td>
             <td><?= $this->element('Cewi/CakephpTbStarter.searchButtons') ?></td>
             <?= $this->Form->end(); ?>
         </tr>
