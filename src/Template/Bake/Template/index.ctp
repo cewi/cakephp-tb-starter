@@ -49,6 +49,15 @@ $fields = collection($fields)
             <% endforeach; %>
             <th class="actions"><?= __('Actions'); ?></th>
         </tr>
+        <tr>
+            <?= $this->Form->create(null, ['url' => ['action' => 'index']]); ?>
+            <% foreach ($fields as $field): %>
+            <th><%= debug($fields); %></th>
+            <% endforeach; %>
+            <td><?= $this->Form->input('name', ['div' => false, 'label' => false]); ?></td>
+            <td><?= $this->element('Cewi/CakephpTbStarter.searchButtons') ?></td>
+            <?= $this->Form->end(); ?>
+        </tr>
     </thead>
     <tbody>
         <?php foreach ($<%= $pluralVar %> as $<%= $singularVar %>): ?>
