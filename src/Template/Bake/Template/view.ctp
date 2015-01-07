@@ -54,13 +54,13 @@ $this->extend('../Layout/TwitterBootstrap/dashboard');
 $this->start('tb_sidebar');
 ?>
 <ul class="nav nav-sidebar">
-    <li><?= $this->Html->link(__('List {0}', ['<%= $pluralHumanName %>']), ['action' => 'index'], ['icon' => 'glyphicon-list']) ?> </li>
-    <li><?= $this->Html->link(__('Edit {0}', ['<%= $singularHumanName %>']), ['action' => 'edit', <%= $pk %>], ['icon'=>'glyphicon-pencil']) ?> </li>
-    <li><?= $this->Form->postLink(__('Delete {0}', ['<%= $singularHumanName %>']), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>), 'icon'=>'glyphicon-warning-sign']) ?> </li>
+    <li><?= $this->Html->link(__('List {0}', [__('<%= $pluralHumanName %>')]), ['action' => 'index'], ['icon' => 'glyphicon-list']) ?> </li>
+    <li><?= $this->Html->link(__('Edit {0}', [__('<%= $singularHumanName %>')]), ['action' => 'edit', <%= $pk %>], ['icon'=>'glyphicon-pencil']) ?> </li>
+    <li><?= $this->Form->postLink(__('Delete {0}', [__('<%= $singularHumanName %>')]), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>), 'icon'=>'glyphicon-warning-sign']) ?> </li>
 </ul>
 <?php $this->end(); ?>
 
-<h2><?= h($<%= $singularVar %>-><%= $displayField %>) ?></h2>
+<h2><?= h(__($<%= $singularVar %>-><%= $displayField %>)) ?></h2>
 <div class="row">
     <% if ($groupedFields['string']) : %>
     <div class="col-lg-5">
@@ -121,7 +121,7 @@ foreach ($relations as $alias => $details):
     %>
 <div class="related row">
         <div class = "col-lg-12">
-            <h4><?= __('Related <%= $otherPluralHumanName %>') ?></h4>
+            <h4><?= __('Related {0}', [__('<%= $otherPluralHumanName %>')]) ?></h4>
             <?php if (!empty($<%= $singularVar %>-><%= $details['property'] %>)): ?>
             <table class="table table-striped">
                 <thead>

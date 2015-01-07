@@ -23,14 +23,14 @@ $this->start('tb_sidebar');
 ?>
 <ul class="nav nav-sidebar">
     <% if (strpos($action, 'add') === false): %>
-    <li><?= $this->Form->postLink(__('Delete {0}', ['<%= $singularHumanName %>']), ['action' => 'delete', $<%= $singularVar %>-><%= $primaryKey[0] %>], ['confirm' => __('Are you sure you want to delete # {0}?', $<%= $singularVar %>-><%= $primaryKey[0] %>), 'icon'=>'glyphicon-warning-sign'])?> </li>
+    <li><?= $this->Form->postLink(__('Delete {0}', [__('<%= $singularHumanName %>')]), ['action' => 'delete', $<%= $singularVar %>-><%= $primaryKey[0] %>], ['confirm' => __('Are you sure you want to delete # {0}?', $<%= $singularVar %>-><%= $primaryKey[0] %>), 'icon'=>'glyphicon-warning-sign'])?> </li>
     <% endif; %>
-    <li><?= $this->Html->link(__('List {0}', ['<%= $pluralHumanName %>']), ['action' => 'index'], ['icon' => 'glyphicon-list']) ?></li>
+    <li><?= $this->Html->link(__('List {0}', [__('<%= $pluralHumanName %>')]), ['action' => 'index'], ['icon' => 'glyphicon-list']) ?></li>
 </ul>
 <?php $this->end(); ?>
 <?= $this->Form->create($<%= $singularVar %>); ?>
 <fieldset>
-    <legend><?= __('<%= Inflector::humanize($action) %> {0}', ['<%= $singularHumanName %>']) ?></legend>
+    <legend><?= __('<%= Inflector::humanize($action) %> {0}', [__('<%= $singularHumanName %>')]) ?></legend>
     <?php
     <%
     foreach ($fields as $field) {

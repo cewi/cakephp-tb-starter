@@ -17,14 +17,14 @@ $this->extend('../Layout/TwitterBootstrap/dashboard');
 $this->start('tb_sidebar');
 ?>
 <ul class="nav nav-sidebar">
-    <li><?= $this->Html->link(__('New {0}', ['<%= $singularHumanName %>']), ['action' => 'add'], ['icon' => 'glyphicon-plus']); ?></li>
+    <li><?= $this->Html->link(__('New {0}', [__('<%= $singularHumanName %>')]), ['action' => 'add'], ['icon' => 'glyphicon-plus']); ?></li>
     <%
     $done = [];
     foreach ($associations as $type => $data):
         foreach ($data as $alias => $details):
             if ($details['controller'] != $this->name && !in_array($details['controller'], $done)):
                 %>
-    <li><?= $this->Html->link(__('List {0}', ['<%= Inflector::humanize($details["controller"]) %>']), ['controller' => '<%= $details["controller"] %>', 'action' => 'index'], ['icon' => 'glyphicon-list']); ?></li>
+    <li><?= $this->Html->link(__('List {0}', [__('<%= Inflector::humanize($details["controller"]) %>')]), ['controller' => '<%= $details["controller"] %>', 'action' => 'index'], ['icon' => 'glyphicon-list']); ?></li>
                 <%
                 $done[] = $details['controller'];
             endif;
@@ -40,7 +40,7 @@ $fields = collection($fields)
         })
         ->take(7);
 %>
-<h2><?= h('<%= ucfirst($pluralVar) %>') ?></h2>
+<h2><?= h(__('<%= ucfirst($pluralVar) %>')) ?></h2>
 <table class="table table-striped" cellpadding="0" cellspacing="0">
     <thead>
         <tr>
