@@ -54,7 +54,7 @@ class FormHelper extends Helper
     {
         if (isset($options['icon']) && !empty($options['icon'])) {
             $options['title'] = $title;
-            $title = $this->_span($options['icon']) . ' ' . $title;
+            $title = $this->_icon($options['icon']) . ' ' . $title;
             unset($options['icon']);
             $options['escape'] = FALSE;
         };

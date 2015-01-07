@@ -15,7 +15,7 @@ trait IconTrait
      * @param string $iconName
      * @return string
      */
-    protected function _span($iconName = '')
+    protected function _icon($iconName = '')
     {
         $out = '';
         $parts = preg_split('/\-/', $iconName);

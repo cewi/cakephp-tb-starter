@@ -54,7 +54,7 @@ class HtmlHelper extends Helper
     {
         if (isset($options['icon']) && !empty($options['icon'])) {
             $options['title'] = $title;
-            $title = $this->_span($options['icon']) . ' ' . $title;
+            $title = $this->_icon($options['icon']) . ' ' . $title;
             unset($options['icon']);
             $options['escape'] = FALSE;
         };
@@ -69,9 +69,9 @@ class HtmlHelper extends Helper
      * @param string $iconName
      * @return string
      */
-    public function span($iconName = '')
+    public function icon($iconName = '')
     {
-        return $this->_span($iconName);
+        return $this->_icon($iconName);
     }
 
 }
