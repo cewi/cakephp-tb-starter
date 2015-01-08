@@ -7,7 +7,7 @@ All bake templates are highly opinionated and will only reflect my own needs. Us
 
 ## What you get
 1. Alternative Bake templates for the index, view, edit and add actions. The Templates produce less links in the sidebar. They include the options to output icons, when the provided Helpers are used. A search-form is provided in index.cp which uses the search-plugin.
-2. HtmlHelper and FormHelper can add icons to links (Actually  ([Icomoon](https://icomoon.io/), [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [Glyphicons](http://getbootstrap.com/components/) supported). You have to include the Font-Libraries yourself. I recommend using bower. The HtmlHelper now has an span() method which outputs a span with the icon.
+2. HtmlHelper and FormHelper can add icons to links (Actually  ([Icomoon](https://icomoon.io/), [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [Glyphicons](http://getbootstrap.com/components/) supported). You have to include the Font-Libraries yourself. I recommend using bower. The HtmlHelper now has an icon() method which outputs a span with the icon.
 
 ## Installation
 You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
