@@ -2,11 +2,11 @@
 
 At the moment this package is far from being complete and possibly broken. Use at your own risk!
 
-The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) plugin to work, so my package depends on this plugin. 
+The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) and the [CakeDC/search](https://github.com/CakeDC/search/tree/3.0) plugins to work, so my package depends on these plugin (required in composer.son). 
 All bake templates are highly opinionated and will only reflect my own needs. Use them as a starting point or inspiration.
 
 ## What you get
-1. Alternative Bake templates for the index, view, edit and add actions. The Templates produce less links in the sidebar. They include the options to output icons, when the provided Helpers are used.
+1. Alternative Bake templates for the index, view, edit and add actions. The Templates produce less links in the sidebar. They include the options to output icons, when the provided Helpers are used. A search-form is provided in index.cp which uses the search-plugin.
 2. HtmlHelper and FormHelper can add icons to links (Actually  ([Icomoon](https://icomoon.io/), [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [Glyphicons](http://getbootstrap.com/components/) supported). You have to include the Font-Libraries yourself. I recommend using bower. The HtmlHelper now has an span() method which outputs a span with the icon.
 
 ## Installation
@@ -32,9 +32,36 @@ composer require cewi/cakephp_tb_starter
 Then load the Plugins in your bootstrap.php
 
 ```
+Plugin::load('Migrations');
 Plugin::load('BootstrapUI');
 Plugin::load('Cewi/CakephpTbStarter', ['bootstrap' => true]);
 ```
+
+At the moment, you have to include the code for the search-componenet and -behavior manually in the table-classes ie.
+
+```
+/**
+  * Search-Component
+  *
+  * @var array
+  */
+ public $filterArgs = [
+     'name' => ['type' => 'like'],
+  ];
+    
+/**
+ * Initialize method
+ *
+ * @param array $config The configuration for the Table.
+ * @return void
+ */
+ public function initialize(array $config)
+  {
+      ...
+	$this->addBehavior('Search.Searchable');
+  }
+```
+Don't forget to check your controller-code! 
 
 ##Usage
 
@@ -63,4 +90,5 @@ Methods:
 just add -t Cewi/CakeTbStarter to your bake commands. The templates rely on the layouts provided by the FriendsOfCake/bootstrap-ui Plugin (above). See there how to include them.
  
 ###TODO
-Add an option to remove the title in links and output only the icon. (Providing only space for the title is not a solution because we need a meaningful title for the title-property of the link, especially when there is only an icon).
+- Add an option to remove the title in links and output only the icon. (Providing only space for the title is not a solution because we need a meaningful title for the title-property of the link, especially when there is only an icon).
+- include the code needed for the search-component and -behavior in the bake template for table-classes.
