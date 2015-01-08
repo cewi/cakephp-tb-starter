@@ -2,7 +2,7 @@
 
 At the moment this package is far from being complete and possibly broken. Use at your own risk!
 
-The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) and the [CakeDC/search](https://github.com/CakeDC/search/tree/3.0) plugins to work, so my package depends on these plugin (required in composer.son). 
+The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) and the [CakeDC/search](https://github.com/CakeDC/search/tree/3.0) plugins to work, so my package depends on these plugin (required in composer.json). 
 All bake templates are highly opinionated and will only reflect my own needs. Use them as a starting point or inspiration.
 
 ## What you get
