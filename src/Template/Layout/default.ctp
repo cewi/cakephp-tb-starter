@@ -38,7 +38,7 @@ if (!$this->fetch('title')) {
  */
 if (!$this->fetch('tb_footer')) {
     $this->start('tb_footer');
-    printf('&copy;%s %s', date('Y'), Configure::read('App.title'));
+    echo '<div class="row pull-right"><small>' . printf('&copy; %s %s', date('Y'), Configure::read('App.title')) . '</small></div>';
     $this->end();
 }
 
@@ -77,6 +77,8 @@ HTML;
 $this->prepend('css', $this->Html->css([
             '/bower/bootswatch/yeti/bootstrap.min',
             '/bower/fontawesome/css/font-awesome.min',
+            '/bower/select2/select2',
+            '/bower/select2-bootstrap-css/select2-bootstrap',
             'icomoon']));
 $this->append('css', $html5Shim);
 
@@ -85,7 +87,11 @@ $this->append('css', $html5Shim);
  */
 $this->prepend('script', $this->Html->script([
             '/bower/jquery/dist/jquery.min',
-            '/bower/bootstrap/dist/js/bootstrap.min']));
+            '/bower/bootstrap/dist/js/bootstrap.min',
+            '/bower/select2/select2.min',
+            '/bower/select2/select2_locale_de',
+            'select2'
+]));
 ?>
 <!DOCTYPE html>
 
