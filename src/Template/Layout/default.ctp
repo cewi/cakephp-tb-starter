@@ -36,9 +36,9 @@ if (!$this->fetch('title')) {
 /**
  * Default `footer` block.
  */
-if (!$this->fetch('tb_footer')) {
+if (true) {
     $this->start('tb_footer');
-    echo '<div class="row pull-right"><small>' . printf('&copy; %s %s', date('Y'), Configure::read('App.title')) . '</small></div>';
+    echo '<div class="row pull-right"><small>' . printf('Hallo &copy; %s %s', date('Y'), Configure::read('App.title')) . '</small></div>';
     $this->end();
 }
 
