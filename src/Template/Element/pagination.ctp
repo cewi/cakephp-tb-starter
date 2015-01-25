@@ -4,5 +4,5 @@
         <?= $this->Paginator->numbers() ?>
         <?= $this->Paginator->next(__('next') . ' >') ?>
     </ul>
-    <p><?= $this->Paginator->counter() ?></p>
+    <p><?= $this->Paginator->counter(__('Page {0} of {1}', '{{page}}', '{{pages}}')); ?></p>
 </div>
