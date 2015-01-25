@@ -2,7 +2,7 @@
 
 At the moment this package is far from being complete and possibly broken. Use at your own risk!
 
-The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) and the [CakeDC/search](https://github.com/CakeDC/search/tree/3.0) plugins to work, so my package depends on these plugin (required in composer.json). 
+The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) and the [CakeDC/search](https://github.com/CakeDC/search/tree/3.0) plugins to work, so my package depends on these plugin (required in composer.json).  Although you have to provide [jquery](http://jquery.com), [bootstrap](http://getbootstrap.com) and/or [bootswatch](http://bootswatch.com), [select2](https://select2.github.io/). 
 All bake templates are highly opinionated and will only reflect my own needs. Use them as a starting point or inspiration.
 
 ## What you get
@@ -32,12 +32,12 @@ composer require cewi/cakephp_tb_starter
 Then load the Plugins in your bootstrap.php
 
 ```
-Plugin::load('Migrations');
+Plugin::load('Search');
 Plugin::load('BootstrapUI');
 Plugin::load('Cewi/CakephpTbStarter', ['bootstrap' => true]);
 ```
 
-At the moment, you have to include the code for the search-componenet and -behavior manually in the table-classes ie.
+At the moment, you have to include the code for the search-component and -behavior manually in the table-classes i.e.
 
 ```
 /**
@@ -83,12 +83,15 @@ Methods:
 ```
 - In $this->Html->link() and $this->Form->postLink() you can add 'icon'=>'the-icon-you-want' in the $options-Array. It then will output an icon before the title. Example: $this->Html->link(__('Edit'), ['action'=>'edit', 1], ['icon'=>'glyphicon-pencil']) will output:
 ```
-<a href=foo_controller/edit/1><span class="glyphicon glyphicon-pencil"  aria-hidden="true"></span> Edit</a>
+<a href=foo_controller/edit/1><span class="glyphicon glyphicon-pencil"  aria-hidden="true"></span>Edit</a>
+```
+If you add 'short'=>true as an extra options, the generated code will not have the title string:
+```
+<a href=foo_controller/edit/1><span class="glyphicon glyphicon-pencil"  aria-hidden="true"></span></a>
 ```
 
 ###Bake-Templates
 just add -t Cewi/CakeTbStarter to your bake commands. The templates rely on the layouts provided by the FriendsOfCake/bootstrap-ui Plugin (above). See there how to include them.
  
 ###TODO
-- Add an option to remove the title in links and output only the icon. (Providing only space for the title is not a solution because we need a meaningful title for the title-property of the link, especially when there is only an icon).
 - include the code needed for the search-component and -behavior in the bake template for table-classes.

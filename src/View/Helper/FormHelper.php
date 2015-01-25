@@ -54,9 +54,16 @@ class FormHelper extends Helper
     {
         if (isset($options['icon']) && !empty($options['icon'])) {
             $options['title'] = $title;
-            $title = $this->_icon($options['icon']) . ' ' . $title;
+            $title = $this->_icon($options['icon']);
+            if (!isset($options['short']) || $options['short'] == false) {
+                $title .= '&nbsp;' . $options['title'];
+                unset($options['short']);
+            }
             unset($options['icon']);
             $options['escape'] = FALSE;
+            /** tootltip */
+            $options['data-toggle'] = "tooltip";
+            $options['data-placement'] = "top";
         };
         return parent::postLink($title, $url, $options);
     }

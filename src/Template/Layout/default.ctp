@@ -83,14 +83,14 @@ $this->prepend('css', $this->Html->css([
 $this->append('css', $html5Shim);
 
 /**
- * Prepend 'js'-Block with jquery and bootstrap js
+ * Prepend 'js'-Block with jquery, bootstrap and select2 js
  */
 $this->prepend('script', $this->Html->script([
             '/bower/jquery/dist/jquery.min',
             '/bower/bootstrap/dist/js/bootstrap.min',
             '/bower/select2/select2.min',
             '/bower/select2/select2_locale_de',
-            'select2'
+            'common'
 ]));
 ?>
 <!DOCTYPE html>

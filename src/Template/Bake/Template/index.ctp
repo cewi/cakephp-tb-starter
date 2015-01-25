@@ -98,9 +98,9 @@ $fields = collection($fields)
             %>
             <td class="actions">
                 <div class="btn-group btn-group-xs" role="group" aria-label="Actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', <%= $pk %>], ['icon' => 'glyphicon-zoom-in', 'class'=>'btn btn-default', 'role'=>'button']) ?>
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', <%= $pk %>], ['icon' => 'glyphicon-pencil', 'class'=>'btn btn-default', 'role'=>'button']) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>), 'icon' => 'glyphicon-warning-sign', 'class'=>'btn btn-danger', 'role'=>'button']) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', <%= $pk %>], ['icon' => 'glyphicon-zoom-in', 'class'=>'btn btn-default', 'role'=>'button', 'short'=>true]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', <%= $pk %>], ['icon' => 'glyphicon-pencil', 'class'=>'btn btn-default', 'role'=>'button', 'short'=>true]) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>), 'icon' => 'glyphicon-warning-sign', 'class'=>'btn btn-danger', 'role'=>'button', 'short'=>true]) ?>
                 </div>
             </td>
         </tr>
