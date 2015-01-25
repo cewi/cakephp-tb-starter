@@ -50,9 +50,13 @@ $fields = collection($fields)
             <th class="actions"><?= __('Actions'); ?></th>
         </tr>
         <tr>
-            <?= $this->Form->create(null, ['url' => ['action' => 'index']]); ?>
+            <?= $this->Form->create(null, ['action' => 'index', 'novalidate' => true]); ?>
             <% foreach ($fields as $field): %>
+                <% if ($field != 'id'): %>
             <td><?= $this->Form->input('<%= $field %>', ['div' => false, 'label' => false]); ?></td>
+                <% else: %>
+            <td>&nbsp;</td>
+                <% endif; %>
             <% endforeach; %>
             <td><?= $this->element('Cewi/CakephpTbStarter.searchButtons') ?></td>
             <?= $this->Form->end(); ?>
