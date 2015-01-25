@@ -57,13 +57,10 @@ class HtmlHelper extends Helper
             $title = $this->_icon($options['icon']);
             if (!isset($options['short']) || $options['short'] == false) {
                 $title .= '&nbsp;' . $options['title'];
-                unset($options['short']);
             }
             unset($options['icon']);
+            unset($options['short']);
             $options['escape'] = FALSE;
-            /** tootltip */
-            $options['data-toggle'] = "tooltip";
-            $options['data-placement'] = "top";
         };
         return parent::link($title, $url, $options);
     }
