@@ -65,4 +65,25 @@ class FormHelper extends Helper
         return parent::postLink($title, $url, $options);
     }
 
+    /**
+     * Iconify Buttons
+     *
+     * @param string $title
+     * @param array $options
+     * @return string
+     */
+    public function button($title, array $options = []){
+        if (isset($options['icon']) && !empty($options['icon'])) {
+            $options['title'] = $title;
+            $title = $this->_icon($options['icon']);
+            if (!isset($options['short']) || $options['short'] == false) {
+                $title .= '&nbsp;' . $options['title'];
+            }
+            unset($options['short']);
+            unset($options['icon']);
+            $options['escape'] = FALSE;
+        };
+        return parent::button($title, $options);
+    }
+
 }
