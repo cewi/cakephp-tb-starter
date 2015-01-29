@@ -37,30 +37,7 @@ Plugin::load('BootstrapUI');
 Plugin::load('Cewi/CakephpTbStarter', ['bootstrap' => true]);
 ```
 
-At the moment, you have to include the code for the search-component and -behavior manually in the table-classes i.e.
 
-```
-/**
-  * Search-Component
-  *
-  * @var array
-  */
- public $filterArgs = [
-     'name' => ['type' => 'like'],
-  ];
-    
-/**
- * Initialize method
- *
- * @param array $config The configuration for the Table.
- * @return void
- */
- public function initialize(array $config)
-  {
-      ...
-	$this->addBehavior('Search.Searchable');
-  }
-```
 Don't forget to check your controller-code! 
 
 ##Usage
@@ -93,5 +70,3 @@ If you add 'short'=>true as an extra options, the generated code will not have t
 ###Bake-Templates
 just add -t Cewi/CakeTbStarter to your bake commands. The templates rely on the layouts provided by the FriendsOfCake/bootstrap-ui Plugin (above). See there how to include them.
  
-###TODO
-- include the code needed for the search-component and -behavior in the bake template for table-classes.
