@@ -52,7 +52,7 @@ $fields = collection($fields)
         <tr>
             <?= $this->Form->create(null, ['action' => 'index', 'novalidate' => true]); ?>
             <% foreach ($fields as $field): %>
-                <% if ($field != 'id'): %>
+                <% if ($field == $displayField): %>
             <td><?= $this->Form->input('<%= $field %>', ['div' => false, 'label' => false]); ?></td>
                 <% else: %>
             <td>&nbsp;</td>
@@ -93,7 +93,6 @@ $fields = collection($fields)
                     }
                 }
             }
-
             $pk = '$' . $singularVar . '->' . $primaryKey[0];
             %>
             <td class="actions">

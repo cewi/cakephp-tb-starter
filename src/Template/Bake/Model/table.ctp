@@ -15,7 +15,8 @@
  */
 use Cake\Utility\Inflector;
 %>
-<?php namespace <%= $namespace %>\Model\Table;
+<?php
+namespace <%= $namespace %>\Model\Table;
 
 use Cake\ORM\Query;
 use Cake\ORM\RulesChecker;
@@ -141,9 +142,7 @@ return $rules;
 * @var array
 */
 public $filterArgs = [
-'name' => [
-'type' => 'like'
-]
+    '<%= $displayField %>' => ['type' => 'like']
 ];
 
 }
