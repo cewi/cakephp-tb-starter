@@ -60,7 +60,7 @@ $this->start('tb_sidebar');
 </ul>
 <?php $this->end(); ?>
 
-<h2><?= h(__($<%= $singularVar %>-><%= $displayField %>)) ?></h2>
+<h2><?= h($<%= $singularVar %>-><%= $displayField %>) ?></h2>
 <div class="row">
     <% if ($groupedFields['string']) : %>
     <div class="col-lg-5">

@@ -1,10 +1,10 @@
 &nbsp;
 <?=
-$this->Form->button('<span class="glyphicon glyphicon-filter"></span> ' . __('Filter'), [
+$this->Form->button( __('Filter'), [
     'type' => 'submit',
-    'escape' => false,
     'label' => false,
     'div' => false,
+    'icon' => 'glyphicon-filter',
     'class' => 'btn btn-sm btn-primary']);
 ?>
 &nbsp;
