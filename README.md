@@ -2,12 +2,13 @@
 
 At the moment this package is far from being complete and possibly broken. Use at your own risk!
 
-The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) and the [CakeDC/search](https://github.com/CakeDC/search/tree/3.0) plugins to work, so my package depends on these plugin (required in composer.json).  Although you have to provide [jquery](http://jquery.com), [bootstrap](http://getbootstrap.com) and/or [bootswatch](http://bootswatch.com), [select2](https://select2.github.io/). 
+The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) and the [CakeDC/search](https://github.com/CakeDC/search/tree/3.0) plugins to work, so my package depends on these plugin (required in composer.json).  Although you have to provide [jquery](http://jquery.com), [bootstrap](http://getbootstrap.com) and/or [bootswatch](http://bootswatch.com), [select2](https://select2.github.io/) and [jasny bootstrap](http://jasny.github.io/bootstrap/). 
 All bake templates are highly opinionated and will only reflect my own needs. Use them as a starting point or inspiration.
 
 ## What you get
 1. Alternative Bake templates for the index, view, edit and add actions. The Templates produce less links in the sidebar. They include the options to output icons, when the provided Helpers are used. A search-form is provided in index.cp which uses the search-plugin.
 2. HtmlHelper and FormHelper can add icons to links (Actually  ([Icomoon](https://icomoon.io/), [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [Glyphicons](http://getbootstrap.com/components/) supported). You have to include the Font-Libraries yourself. I recommend using bower. The HtmlHelper now has an icon() method which outputs a span with the icon.
+3. some reusable elements (file-upload, button, search-buttons, pagination)
 
 ## Installation
 You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
