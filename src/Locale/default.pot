@@ -1,0 +1,148 @@
+# LANGUAGE translation of CakePHP Application
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2015-02-01 10:25+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: Template/Bake/Element/form.ctp:26
+#: Template/Bake/Template/view.ctp:59
+msgid "Delete {0}"
+msgstr ""
+
+#: Template/Bake/Element/form.ctp:26;33
+#: Template/Bake/Template/index.ctp:20
+#: Template/Bake/Template/view.ctp:58;59
+msgid "<%= $singularHumanName %>"
+msgstr ""
+
+#: Template/Bake/Element/form.ctp:26
+#: Template/Bake/Template/index.ctp:102
+#: Template/Bake/Template/view.ctp:59;146
+msgid "Are you sure you want to delete # {0}?"
+msgstr ""
+
+#: Template/Bake/Element/form.ctp:28
+#: Template/Bake/Template/index.ctp:27
+#: Template/Bake/Template/view.ctp:57
+msgid "List {0}"
+msgstr ""
+
+#: Template/Bake/Element/form.ctp:28
+#: Template/Bake/Template/view.ctp:57
+msgid "<%= $pluralHumanName %>"
+msgstr ""
+
+#: Template/Bake/Element/form.ctp:33
+msgid "<%= Inflector::humanize($action) %> {0}"
+msgstr ""
+
+#: Template/Bake/Element/form.ctp:62
+msgid "Submit"
+msgstr ""
+
+#: Template/Bake/Template/index.ctp:20
+msgid "New {0}"
+msgstr ""
+
+#: Template/Bake/Template/index.ctp:27
+msgid "<%= Inflector::humanize($details[\"controller\"]) %>"
+msgstr ""
+
+#: Template/Bake/Template/index.ctp:43
+msgid "<%= ucfirst($pluralVar) %>"
+msgstr ""
+
+#: Template/Bake/Template/index.ctp:50
+#: Template/Bake/Template/view.ctp:132
+msgid "Actions"
+msgstr ""
+
+#: Template/Bake/Template/index.ctp:100
+#: Template/Bake/Template/view.ctp:144
+msgid "View"
+msgstr ""
+
+#: Template/Bake/Template/index.ctp:101
+#: Template/Bake/Template/view.ctp:145
+msgid "Edit"
+msgstr ""
+
+#: Template/Bake/Template/index.ctp:102
+#: Template/Bake/Template/view.ctp:146
+msgid "Delete"
+msgstr ""
+
+#: Template/Bake/Template/view.ctp:58
+msgid "Edit {0}"
+msgstr ""
+
+#: Template/Bake/Template/view.ctp:72
+msgid "<%= Inflector::humanize($details["
+msgstr ""
+
+#: Template/Bake/Template/view.ctp:75;84;100;110;130
+msgid "<%= Inflector::humanize($field) %>"
+msgstr ""
+
+#: Template/Bake/Template/view.ctp:101
+msgid "Yes"
+msgstr ""
+
+#: Template/Bake/Template/view.ctp:101
+msgid "No"
+msgstr ""
+
+#: Template/Bake/Template/view.ctp:124
+msgid "Related {0}"
+msgstr ""
+
+#: Template/Bake/Template/view.ctp:124
+msgid "<%= $otherPluralHumanName %>"
+msgstr ""
+
+#: Template/Element/pagination.ctp:3
+msgid "previous"
+msgstr ""
+
+#: Template/Element/pagination.ctp:5
+msgid "next"
+msgstr ""
+
+#: Template/Element/pagination.ctp:7
+msgid "Page {0} of {1}"
+msgstr ""
+
+#: Template/Element/searchButtons.ctp:3
+msgid "Filter"
+msgstr ""
+
+#: Template/Element/searchButtons.ctp:11
+msgid "Reset"
+msgstr ""
+
+#: Template/Element/upload.ctp:22
+msgid "Select {0}"
+msgstr ""
+
+#: Template/Element/upload.ctp:22
+msgid "File"
+msgstr ""
+
+#: Template/Element/upload.ctp:23
+msgid "Change"
+msgstr ""
+
+#: Template/Element/upload.ctp:26
+msgid "Remove"
+msgstr ""
+
