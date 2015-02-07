@@ -77,8 +77,7 @@ HTML;
 $this->prepend('css', $this->Html->css([
             '/bower/bootswatch/yeti/bootstrap.min',
             '/bower/fontawesome/css/font-awesome.min',
-            '/bower/select2/select2',
-            '/bower/select2-bootstrap-css/select2-bootstrap',
+            '/bower/select2/dist/css/select2.min',
             'icomoon']));
 $this->append('css', $html5Shim);
 
@@ -88,8 +87,8 @@ $this->append('css', $html5Shim);
 $this->prepend('script', $this->Html->script([
             '/bower/jquery/dist/jquery.min',
             '/bower/bootstrap/dist/js/bootstrap.min',
-            '/bower/select2/select2.min',
-            '/bower/select2/select2_locale_de',
+            '/bower/select2/dist/js/select2.min',
+            '/bower/select2/dist/js/i18n/de',
             'common'
 ]));
 ?>
