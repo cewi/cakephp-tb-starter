@@ -38,7 +38,11 @@ if (!$this->fetch('title')) {
  */
 if (true) {
     $this->start('tb_footer');
-    printf('<div class="row"><div class="col-md-4 col-md-offset-8"><small>&copy; %s %s</small></div></div>', date('Y'), Configure::read('App.author'));
+    printf('<div class="row"><div class="col-md-3 col-md-offset-9"><small>&copy; %s %s</small></div></div>', date('Y'), Configure::read('App.author'));
+    if (Configure::read('debug')){
+        printf('<div class="row"><div class="col-md-3 col-md-offset-9"><small>Version: %s Build: %s Date: %s</small></div></div>', Configure::read('App.version'), Configure::read('App.build'), Configure::read('App.builddate'));
+    
+    }
     $this->end();
 }
 
