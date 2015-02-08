@@ -56,7 +56,7 @@ $this->start('tb_sidebar');
 <ul class="nav nav-sidebar">
     <li><?= $this->Html->link(__('List {0}', [__('<%= $pluralHumanName %>')]), ['action' => 'index'], ['icon' => 'glyphicon-list']) ?> </li>
     <li><?= $this->Html->link(__('Edit {0}', [__('<%= $singularHumanName %>')]), ['action' => 'edit', <%= $pk %>], ['icon'=>'glyphicon-pencil']) ?> </li>
-    <li><?= $this->Form->postLink(__('Delete {0}', [__('<%= $singularHumanName %>')]), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>), 'icon'=>'glyphicon-warning-sign']) ?> </li>
+    <li><?= $this->Form->postLink(__('Delete {0}', [__('<%= $singularHumanName %>')]), ['action' => 'delete', <%= $pk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $pk %>), 'icon'=>'glyphicon-remove']) ?> </li>
 </ul>
 <?php $this->end(); ?>
 
@@ -143,7 +143,7 @@ foreach ($relations as $alias => $details):
                             <div class="btn-group btn-group-xs" role="group" aria-label="Actions">
                                 <?= $this->Html->link(__('View'), ['controller' => '<%= $details['controller'] %>', 'action' => 'view', <%= $otherPk %>], ['icon'=>'glyphicon-zoom-in', 'class'=>'btn btn-default', 'role'=>'button', 'short'=>true]) ?>
                                 <?= $this->Html->link(__('Edit'), ['controller' => '<%= $details['controller'] %>', 'action' => 'edit', <%= $otherPk %>], ['icon' => 'glyphicon-pencil', 'class'=>'btn btn-default', 'role'=>'button', 'short'=>true]) ?>
-                                <?= $this->Form->postLink(__('Delete'), ['controller' => '<%= $details['controller'] %>', 'action' => 'delete', <%= $otherPk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $otherPk %>), 'icon'=>'glyphicon-warning-sign', 'class'=>'btn btn-danger', 'role'=>'button', 'short'=>true]) ?>
+                                <?= $this->Form->postLink(__('Delete'), ['controller' => '<%= $details['controller'] %>', 'action' => 'delete', <%= $otherPk %>], ['confirm' => __('Are you sure you want to delete # {0}?', <%= $otherPk %>), 'icon'=>'glyphicon-remove', 'class'=>'btn btn-danger', 'role'=>'button', 'short'=>true]) ?>
                             </div>
                         </td>
                     </tr>

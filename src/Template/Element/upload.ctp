@@ -19,11 +19,11 @@
         <span class="fileinput-filename"></span>
     </div>
     <span class="input-group-addon btn btn-default btn-file">
-        <span class="fileinput-new"><?= __('Select {0}', __('File')); ?></span>&nbsp;
-        <span class="fileinput-exists"><?= __('Change'); ?></span>
+        <span class="fileinput-new"><span class="glyphicon glyphicon-folder-open"></span>&nbsp;<?= __('Select {0}', __('File')); ?></span>&nbsp;
+        <span class="fileinput-exists"><span class="glyphicon glyphicon-random"></span>&nbsp;<?= __('Change'); ?></span>
         <?= $this->Form->file('file', ['div' => false]); ?>
     </span>
-    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput"><?= __('Remove'); ?></a>
+    <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput"><span class="glyphicon glyphicon-remove"></span>&nbsp;<?= __('Remove'); ?></a>
 </div>
 <br/>
 <?= $this->Html->script('/bower/jasny-bootstrap/dist/js/jasny-bootstrap.min', ['block' => true]); ?>
