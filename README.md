@@ -3,7 +3,7 @@
 At the moment this package is far from being complete and possibly broken. Use at your own risk!
 
 The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) and the [CakeDC/search](https://github.com/CakeDC/search/tree/3.0) plugins to work, so my package depends on these plugin (required in composer.json).  Although you have to provide [jquery](http://jquery.com), [bootstrap](http://getbootstrap.com) and/or [bootswatch](http://bootswatch.com), [select2](https://select2.github.io/) and [jasny bootstrap](http://jasny.github.io/bootstrap/). 
-All bake templates are highly opinionated and will only reflect my own needs. Use them as a starting point or inspiration.
+All bake templates are highly opinionated and will only reflect my personal design ideas. However you can use them as a starting point or inspiration.
 
 ## What you get
 1. Alternative Bake templates for the index, view, edit and add actions. The Templates produce less links in the sidebar. They include the options to output icons, when the provided Helpers are used. A search-form is provided in index.cp which uses the search-plugin.
@@ -44,16 +44,17 @@ Don't forget to check your controller-code!
 ##Usage
 
 ###Helpers
-If you plan to use the Helpers just include them in AppController or in any Controller, you wish to use them:
+If you plan to use the Helpers just include them in AppView:
 
-```
-public $helpers = [
-        'Cewi/CakephpTbStarter.Form',
-        'Cewi/CakephpTbStarter.Html',
-    ];
-```
 
-Methods: 
+     public $layout = 'Cewi/CakephpTbStarter.default';
+
+     public function initialize()
+     {
+        $this->loadHelper('Form', ['className' => 'Cewi/CakephpTbStarter.Form']);
+        $this->loadHelper('Html', ['className' => 'Cewi/CakephpTbStarter.Html']);
+        $this->loadHelper('Flash', ['className' => 'BootstrapUI.Flash']);
+     } 
 
 - $this->Html->span($iconName) will output a span-Tag with the icon. I.e. $this->Icon->span('glyphicon-star') will output 
 ```
