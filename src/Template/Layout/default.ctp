@@ -79,7 +79,7 @@ $html5Shim = <<<HTML
 <![endif]-->
 HTML;
 $this->prepend('css', $this->Html->css([
-            '/bower/bootswatch/yeti/bootstrap.min',
+            '/bower/bootswatch/paper/bootstrap.min',
             '/bower/fontawesome/css/font-awesome.min',
             '/bower/select2/dist/css/select2.min',
             'icomoon']));
