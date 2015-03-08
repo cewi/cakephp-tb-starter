@@ -2,13 +2,14 @@
 
 At the moment this package is far from being complete and possibly broken. Use at your own risk!
 
-The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) and the [CakeDC/search](https://github.com/CakeDC/search/tree/3.0) plugins to work, so my package depends on these plugin (required in composer.json).  Although you have to provide [jquery](http://jquery.com), [bootstrap](http://getbootstrap.com) and/or [bootswatch](http://bootswatch.com), [select2](https://select2.github.io/) and [jasny bootstrap](http://jasny.github.io/bootstrap/). 
-All bake templates are highly opinionated and will only reflect my personal design ideas. However you can use them as a starting point or inspiration.
+The baked views need the [FriendsOfCake/bootstrap-ui](https://github.com/FriendsOfCake/bootstrap-ui) and the [CakeDC/search](https://github.com/CakeDC/search/tree/3.0) plugins to work, so my package depends on these plugin (required in composer.json).  Although you have to provide [jquery](http://jquery.com), [bootstrap](http://getbootstrap.com) and/or [bootswatch](http://bootswatch.com), [select2](https://select2.github.io/) and [jasny bootstrap](http://jasny.github.io/bootstrap/). The provided layout file assumes they are installed via bower under the directory /webroot/bower/. At the moment I'm not using any CDN, but you can change this in the default.cp File. All bake templates are highly opinionated and will reflect my personal design ideas. However you can use them as a starting point or inspiration.
 
 ## What you get
-1. Alternative Bake templates for the index, view, edit and add actions. The Templates produce less links in the sidebar. They include the options to output icons, when the provided Helpers are used. A search-form is provided in index.cp which uses the search-plugin.
-2. HtmlHelper and FormHelper can add icons to links (Actually  ([Icomoon](https://icomoon.io/), [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [Glyphicons](http://getbootstrap.com/components/) supported). You have to include the Font-Libraries yourself. I recommend using bower. The HtmlHelper now has an icon() method which outputs a span with the icon.
-3. some reusable elements (file-upload, button, search-buttons, pagination)
+1. Alternative Bake templates for the index, view, edit and add actions. The Templates produce less links in the sidebar. They include the options to output icons, when the provided Helpers are used. A search-form is provided in index.cp which uses the search-plugin. Per default there is only a 'name'-property input. but you can add other fields. Don't forget to adapt $filterArgs in the resp. Table-Object.
+2. HtmlHelper and FormHelper can add icons to links (Actually  ([Icomoon](https://icomoon.io/), [FontAwesome](http://fortawesome.github.io/Font-Awesome/) and [Glyphicons](http://getbootstrap.com/components/) supported). You have to include the Font-Libraries yourself. I recommend using bower.  
+The HtmlHelper now has an icon() method which outputs a span with the icon.  
+Form->file() now generates the file-input-widget from [jasny](http://jasny.github.io/bootstrap/javascript/#fileinput-examples) 
+3. some reusable elements (uploadButton, submitButton, searchButtons, pagination)
 
 ## Installation
 You can install this plugin into your CakePHP application using [composer](http://getcomposer.org).
@@ -44,7 +45,7 @@ Don't forget to check your controller-code!
 ##Usage
 
 ###Helpers
-If you plan to use the Helpers just include them in AppView:
+If you plan to use the Helpers you have to include them in AppView:
 
 
      public $layout = 'Cewi/CakephpTbStarter.default';
@@ -68,6 +69,7 @@ If you add 'short'=>true as an extra options, the generated code will not have t
 ```
 <a href=foo_controller/edit/1><span class="glyphicon glyphicon-pencil"  aria-hidden="true"></span></a>
 ```
+- $this->Form->file() outputs the File input widget from [jasny](http://jasny.github.io/bootstrap/javascript/#fileinput). You have to install the libraries with bower. They are loaded in the default Layout. 
 
 ###Bake-Templates
 just add -t Cewi/CakeTbStarter to your bake commands. The templates rely on the layouts provided by the FriendsOfCake/bootstrap-ui Plugin (above). See there how to include them.

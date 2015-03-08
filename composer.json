@@ -1,6 +1,6 @@
 {
     "name": "cewi/cakephp_tb_starter",
-    "description": "Cakephp 3 plugin which extends FriendsOfCake/bootstrap-ui with more advanced bake templates",
+    "description": "Cakephp 3 plugin which extends FriendsOfCake/bootstrap-ui with some added functionallity",
     "type": "cakephp-plugin",
     "keywords": [
         "cakephp", 
