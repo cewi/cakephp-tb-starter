@@ -1,4 +1,4 @@
-# Plugin for CakePHP for using Twitter Bootstrap 3
+# Plugin for CakePHP to ease the use of Twitter Bootstrap 3
 
 At the moment this package is far from being complete and possibly broken. Use at your own risk!
 
