@@ -38,10 +38,12 @@ if (!$this->fetch('title')) {
  */
 if (true) {
     $this->start('tb_footer');
+    printf('<nav class="navbar navbar-default navbar-fixed-bottom"><div class="container">');
     printf('<div class="row"><div class="col-md-3 col-md-offset-9"><small>&copy; %s %s</small></div></div>', date('Y'), Configure::read('App.author'));
     if (Configure::read('debug')) {
         printf('<div class="row"><div class="col-md-3 col-md-offset-9"><small>Version: %s Build: %s Date: %s</small></div></div>', Configure::read('App.version'), Configure::read('App.build'), Configure::read('App.builddate'));
     }
+    printf('</div></nav>');
     $this->end();
 }
 
@@ -96,6 +98,7 @@ $this->prepend('script', $this->Html->script([
             '/bower/select2/dist/js/i18n/de',
             'common'
 ]));
+
 ?>
 <!DOCTYPE html>
 
@@ -109,6 +112,8 @@ $this->prepend('script', $this->Html->script([
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
+
+    <style type="text/css"> body { padding-bottom: 70px; }</style>
 
 </head>
 
