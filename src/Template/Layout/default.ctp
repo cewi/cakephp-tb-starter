@@ -38,12 +38,12 @@ if (!$this->fetch('title')) {
  */
 if (true) {
     $this->start('tb_footer');
-    printf('<nav class="navbar navbar-default navbar-fixed-bottom"><div class="container">');
-    printf('<div class="row"><div class="col-md-3 col-md-offset-9"><small>&copy; %s %s</small></div></div>', date('Y'), Configure::read('App.author'));
+    printf('<nav class="navbar navbar-inverse navbar-default navbar-fixed-bottom"><div class="container">');
+    printf('<div class="col-md-3 col-md-offset-9"><p class="navbar-text"><small>&copy; %s %s</small>', date('Y'), Configure::read('App.author'));
     if (Configure::read('debug')) {
-        printf('<div class="row"><div class="col-md-3 col-md-offset-9"><small>Version: %s Build: %s Date: %s</small></div></div>', Configure::read('App.version'), Configure::read('App.build'), Configure::read('App.builddate'));
+        printf('<br/><small>Version: %s Build: %s Date: %s</small>', Configure::read('App.version'), Configure::read('App.build'), Configure::read('App.builddate'));
     }
-    printf('</div></nav>');
+    printf('</p></div></div></nav>');
     $this->end();
 }
 
@@ -80,7 +80,7 @@ $html5Shim = <<<HTML
 <![endif]-->
 HTML;
 $this->prepend('css', $this->Html->css([
-            '/bower/bootswatch/paper/bootstrap.min',
+            '/bower/bootswatch/yeti/bootstrap.min',
             '/bower/jasny-bootstrap/dist/css/jasny-bootstrap.min',
             '/bower/fontawesome/css/font-awesome.min',
             '/bower/select2/dist/css/select2.min',
